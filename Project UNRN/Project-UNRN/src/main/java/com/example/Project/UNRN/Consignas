@@ -1,0 +1,52 @@
+
+Modelar las siguientes entidades y sus relaciones.
+
+ Curso:
+    ● nombre
+    ● descripción
+    ● fecha de inicio
+    ● fecha de fin
+
+ Estudiante:
+    ● nombre
+    ● apellido
+    ● email
+    ● dni
+    ● fecha de nacimiento
+    ● edad (no se debe persistir en la base de datos)
+
+  Inscripción:
+    ● fecha de inscripción
+    ● estado (Aceptada, Rechazada, Pendiente)
+
+    Relaciones:
+    ● Una inscripción pertenece a un único curso (relación Many-to-One
+    entre "Inscripción" y "Curso").
+    ● Una inscripción pertenece a un solo estudiante (relación Many-to-One
+    entre "Inscripción" y "Estudiante").
+
+    --------------------------------------------------------------------------------------------------------------------
+
+    Consultas:
+        ● Listar todos los cursos
+        ● Listar todos los estudiantes
+        ● Listar todos los estudiantes que tengan un dni mayor a 20M y que su apellido sea
+        “Romero”
+        ● Listar todas las inscripciones rechazadas o pendiente
+        ● Listar todos los cursos que hayan empezado después de “01/02/2020”
+        ● Listar todas las inscripciones en base a un parámetro de estado
+        ● Listar todas las inscripciones en base a un parámetro de estado utilizando consulta
+        nativa
+        ● Implementar las primeras 6 consultas mediante consulta derivada
+        ● Listar todos los estudiantes de forma paginada y ordenada ascendente por DNI
+            Probar las siguientes combinaciones:
+            ○ pagina 1, tamaño 5
+            ○ pagina 0, tamaño 2
+
+    Servicio y Transacción:
+        Queremos registrar una inscripción donde se tiene que indicar el estudiante y curso.
+
+        Reglas de negocio:
+        ● El estudiante debe ser mayor de edad
+
+        Nota: validar todos los parámetros del método del servicio
